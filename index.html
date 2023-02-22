@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        font-size: 18px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      select {
+        font-size: 18px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        font-size: 18px;
+        padding: 10px;
+        background-color: #0077cc;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #005fa3;
+      }
+      @media screen and (max-width: 600px) {
+        main {
+          padding: 10px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        label {
+          font-size: 16px;
+        }
+        input[type="text"], select, button {
+          font-size: 16px;
+          padding: 8px;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Track Your Order</h1>
+      <p>Please enter your tracking ID and select the courier to track your order:</p>
+      <form id="track-form">
+        <label for="courier">Select Courier:</label>
+        <select id="courier">
+          <option value="bluedart">BlueDart</option>
+          <option value="delhivery">Delhivery</option>
+        </select>
+        <label for="tracking_id">Enter Tracking ID:</label>
+        <input type="text" id="tracking_id" name="tracking_id" placeholder="Tracking ID" required>
+        <button type="submit" id="track-button">Track Order</button>
+      </form>
+      <p>To track your order, please select the courier and enter the tracking ID in the field above. Then click on the "Track Order" button. You will be redirected to the tracking page of the selected courier with your tracking ID pre-filled.</p>
+    </main>
+    <script>
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const courier = document.getElementById("courier").value;
+               const trackingId = document.getElementById("tracking_id").value;
+        if (courier === "bluedart") {
+          const url = `https://www.bluedart.com/web/guest/trackdartresultthirdparty?trackFor=0&trackNo=${trackingId}`;
+          window.open(url, "_blank");
+        } else if (courier === "delhivery") {
+          const url = `https://www.delhivery.com/track/package/${trackingId}`;
+          window.open(url, "_blank");
+        }
+      }
+      const form = document.getElementById("track-form");
+      form.addEventListener("submit", handleFormSubmit);
+    </script>
+  </body>
+</html>
