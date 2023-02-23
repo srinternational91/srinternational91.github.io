@@ -11,23 +11,26 @@
         padding: 0;
         background-color: #f0f0f0;
       }
-menu-mobile-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* add this property */
-  text-decoration: none;
-}
 
-menu-mobile-logo img {
-  margin-right: 10px;
-}
+      .menu-mobile-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
 
-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-}
+      .menu-mobile-logo img {
+        margin-right: 10px;
+      }
 
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
 
       main {
         max-width: 800px;
@@ -37,18 +40,22 @@ logo {
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       }
+
       h1 {
         text-align: center;
         margin-bottom: 20px;
       }
+
       form {
         display: flex;
         flex-direction: column;
       }
+
       label {
         font-size: 18px;
         margin-bottom: 10px;
       }
+
       input[type="text"] {
         font-size: 18px;
         padding: 10px;
@@ -56,6 +63,7 @@ logo {
         border-radius: 5px;
         border: 1px solid #ccc;
       }
+
       select {
         font-size: 18px;
         padding: 10px;
@@ -63,6 +71,7 @@ logo {
         border-radius: 5px;
         border: 1px solid #ccc;
       }
+
       button {
         font-size: 18px;
         padding: 10px;
@@ -72,9 +81,11 @@ logo {
         border-radius: 5px;
         cursor: pointer;
       }
+
       button:hover {
         background-color: #005fa3;
       }
+
       @media screen and (max-width: 600px) {
         main {
           padding: 10px;
@@ -96,9 +107,12 @@ logo {
   <body>
     <main>
       <a class="menu-mobile-logo" href="https://cosmeticbaba.com">
-                <img src="https://cdn3.mydukaan.io/app/image/80x80/?url=https://dukaan-core-file-service.s3.ap-southeast-1.amazonaws.com/upload_file_service/13c250df-375b-4007-bfca-55625a1f7a4b/babaimage.png" alt="cosmeticbaba logo" width="50" height="50"></a><div class="logo">CosmeticBaba</div>
+        <img src="https://cdn3.mydukaan.io/app/image/80x80/?url=https://dukaan-core-file-service.s3.ap-southeast-1.amazonaws.com/upload_file_service/13c250df-375b-4007-bfca-55625a1f7a4b/babaimage.png" alt="cosmeticbaba logo" width="50" height="50">
+        <div class="logo">CosmeticBaba</div>
+      </a>
       <h1>Track Your Order</h1>
-      <h2>Track Orders Shipped via BlueDart and Delhivery&nbsp;</h2><p>We have designed this tool so that you can track orders placed on our website i.e <a href="https://cosmeticbaba.com/categories" target="_blank"><strong>CosmeticBaba.com</strong></a> and our partners networks including <a href="https://c-ba.in/qnmCC5" target="_blank"><strong>Amazon.in</strong></a><strong>, </strong><a href="https://www.jiomart.com/s/s-r-international/2272/products" target="_blank"><strong>Jiomart.com</strong></a><strong> </strong>but you can also use this tool to track any order shipped via BlueDart and Delhivery.</p>
+      <h2>Track Orders Shipped via BlueDart and Delhivery&nbsp;</h2>
+      <p>We have designed this tool so that you can track orders placed on our website i.e <a href="https://cosmeticbaba.com/categories" target="_blank"><strong>CosmeticBaba.com</strong></a> and our partners networks including <a href="https://c-ba.in/qnmCC5" target="_blank"><strong>Amazon.in</strong></a><strong>, </strong><a href="https://www.jiomart.com/s/s-r-international/2272/products" target="_blank"><strong>Jiomart.com</strong></a><strong> </strong>but you can also use this tool to track any order shipped via BlueDart and Delhivery.</p>
       <p>Please enter your tracking ID and select the courier to track your order:</p>
       <form id="track-form">
         <label for="courier">Select Courier:</label>
