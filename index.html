@@ -122,6 +122,7 @@
         <select id="courier">
           <option value="bluedart">BlueDart</option>
           <option value="delhivery">Delhivery</option>
+          <option value="ekart">Ekart</option>
         </select>
         <label for="tracking_id">Enter Tracking ID:</label>
         <input type="text" id="tracking_id" name="tracking_id" placeholder="Tracking ID" required>
@@ -139,6 +140,9 @@
           window.open(url, "_blank");
         } else if (courier === "delhivery") {
           const url = `https://www.delhivery.com/track/package/${trackingId}`;
+          window.open(url, "_blank");
+        } else if (courier === "ekart") {
+          const url = `https://ekartlogistics.com/shipmenttrack/${trackingId}`;
           window.open(url, "_blank");
         }
       }
