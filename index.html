@@ -123,6 +123,7 @@
           <option value="bluedart">BlueDart</option>
           <option value="delhivery">Delhivery</option>
           <option value="ekart">Ekart</option>
+          <option value="xpressbees">Xpressbees</option>
         </select>
         <label for="tracking_id">Enter Tracking ID:</label>
         <input type="text" id="tracking_id" name="tracking_id" placeholder="Tracking ID" required>
@@ -143,6 +144,9 @@
           window.open(url, "_blank");
         } else if (courier === "ekart") {
           const url = `https://ekartlogistics.com/shipmenttrack/${trackingId}`;
+          window.open(url, "_blank");
+        } else if (courier === "xpressbees") {
+          const url = `https://www.xpressbees.com/track?isawb=Yes&trackid=${trackingId}`;
           window.open(url, "_blank");
         }
       }
